@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:stacked_tdd_app/ui/common/app_strings.dart';
 
 class RfqWidget extends StatelessWidget {
   final Map<String, dynamic>? data;
@@ -44,7 +45,7 @@ class RfqWidget extends StatelessWidget {
             top: 30,
             left: 15,
             child: Text(
-              "Request for quote",
+              kRequestForQuote,
               style: GoogleFonts.poppins(
                   fontSize: 18,
                   fontWeight: FontWeight.w600,
@@ -59,7 +60,7 @@ class RfqWidget extends StatelessWidget {
                   style: ButtonStyle(
                     backgroundColor: WidgetStateProperty.all(Colors.white),
                   ),
-                  child: Text("Create RFQ",
+                  child: Text(kCreateRfq,
                       style: GoogleFonts.poppins(
                           fontSize: 12,
                           fontWeight: FontWeight.w700,

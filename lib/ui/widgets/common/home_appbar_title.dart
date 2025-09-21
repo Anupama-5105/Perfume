@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:stacked_tdd_app/ui/common/app_colors.dart';
 import 'package:stacked_tdd_app/ui/common/app_images.dart';
+import 'package:stacked_tdd_app/ui/common/app_strings.dart';
 import 'package:stacked_tdd_app/ui/common/ui_helpers.dart';
 
 class HomeAppbarTitleWidget extends StatelessWidget {
@@ -15,7 +16,7 @@ class HomeAppbarTitleWidget extends StatelessWidget {
           verticalSpaceSmall,
           RichText(
             text: TextSpan(
-              text: "Welcome, ",
+              text: "$kWelcomeTitle, ",
               style: GoogleFonts.poppins(
                 fontSize: 15,
                 color: welcomeTextColor,
@@ -23,7 +24,7 @@ class HomeAppbarTitleWidget extends StatelessWidget {
               ),
               children: <TextSpan>[
                 TextSpan(
-                  text: "User!",
+                  text: "$kUser!",
                   style: GoogleFonts.poppins(
                     fontSize: 17,
                     fontWeight: FontWeight.w600,
@@ -65,7 +66,7 @@ class HomeAppbarTitleWidget extends StatelessWidget {
                       ),
                       horizontalSpaceSmall,
                       Text(
-                        "Search..",
+                        kSearch,
                         style: GoogleFonts.poppins(
                             fontWeight: FontWeight.w500,
                             fontSize: 14,
@@ -86,7 +87,7 @@ class HomeAppbarTitleWidget extends StatelessWidget {
                 child: Row(
                   children: [
                     Text(
-                      "Scan Here",
+                      kScanHere,
                       style: GoogleFonts.poppins(
                           fontWeight: FontWeight.w600,
                           fontSize: 13,

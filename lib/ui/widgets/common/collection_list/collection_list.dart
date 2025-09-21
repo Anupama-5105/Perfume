@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked_tdd_app/ui/common/app_colors.dart';
 import 'package:stacked_tdd_app/ui/common/app_images.dart';
+import 'package:stacked_tdd_app/ui/common/app_strings.dart';
 import 'package:stacked_tdd_app/ui/common/ui_helpers.dart';
 
 import 'collection_list_model.dart';
@@ -33,7 +34,7 @@ class CollectionList extends StackedView<CollectionListModel> {
               ),
               const Spacer(),
               Text(
-                "View All",
+                kViewAll,
                 style: GoogleFonts.poppins(
                     fontWeight: FontWeight.w500,
                     fontSize: 14,
@@ -76,10 +77,7 @@ class CollectionList extends StackedView<CollectionListModel> {
                                       fit: BoxFit.cover,
                                       errorBuilder:
                                           (context, error, stackTrace) =>
-                                              const Icon(
-                                        Icons.broken_image,
-                                        size: 100,
-                                      ),
+                                              Image.asset(spreyIcon),
                                     ),
                                   ),
                                 ),
@@ -161,7 +159,7 @@ class CollectionList extends StackedView<CollectionListModel> {
                                             borderRadius:
                                                 BorderRadius.circular(44),
                                           ),
-                                          child: Text("RFQ",
+                                          child: Text(kRfq,
                                               style: GoogleFonts.poppins(
                                                   fontWeight: FontWeight.w600,
                                                   fontSize: 13,
@@ -179,7 +177,7 @@ class CollectionList extends StackedView<CollectionListModel> {
                                                   BorderRadius.circular(44),
                                             ),
                                             child: Text(
-                                              "Add to Cart",
+                                              kAddToCart,
                                               style: GoogleFonts.poppins(
                                                   fontWeight: FontWeight.w500,
                                                   fontSize: 12,
@@ -221,12 +219,16 @@ class CollectionList extends StackedView<CollectionListModel> {
                           Positioned(
                             top: 10,
                             right: 10,
-                            child: Container(
-                              margin: const EdgeInsets.symmetric(horizontal: 5),
-                              child: Image.asset(
-                                heartIcon,
-                                height: 20,
-                                width: 20,
+                            child: GestureDetector(
+                              onDoubleTap: () {},
+                              child: Container(
+                                margin:
+                                    const EdgeInsets.symmetric(horizontal: 5),
+                                child: Image.asset(
+                                  heartIcon,
+                                  height: 20,
+                                  width: 20,
+                                ),
                               ),
                             ),
                           )

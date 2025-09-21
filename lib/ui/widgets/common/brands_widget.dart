@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:stacked_tdd_app/ui/common/app_colors.dart';
+import 'package:stacked_tdd_app/ui/common/app_strings.dart';
 
 class BrandsWidget extends StatelessWidget {
   final Map<String, dynamic>? data;
@@ -17,13 +18,13 @@ class BrandsWidget extends StatelessWidget {
           child: Row(
             children: [
               Text(
-                "Shop By Brands",
+                kShopByBrands,
                 style: GoogleFonts.poppins(
                     fontWeight: FontWeight.w600, fontSize: 18),
               ),
               const Spacer(),
               Text(
-                "View All",
+                kViewAll,
                 style: GoogleFonts.poppins(
                     fontWeight: FontWeight.w500,
                     fontSize: 14,

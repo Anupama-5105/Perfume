@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stacked_tdd_app/ui/widgets/common/network_image.dart';
 
 class BannerGridWidget extends StatelessWidget {
   final Map<String, dynamic>? data;
@@ -27,11 +28,8 @@ class BannerGridWidget extends StatelessWidget {
           ),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(10),
-            child: Image.network(
-              list[index]['image'] ?? "",
-              fit: BoxFit.cover,
-              errorBuilder: (context, error, stackTrace) =>
-                  const Icon(Icons.broken_image),
+            child: NetworkImageWidget(
+              url: list[index]['image'] ?? "",
             ),
           ),
         );

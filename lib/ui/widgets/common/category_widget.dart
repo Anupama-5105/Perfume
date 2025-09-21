@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:stacked_tdd_app/ui/common/app_colors.dart';
+import 'package:stacked_tdd_app/ui/common/app_strings.dart';
 
 class CategoryWidget extends StatelessWidget {
   final Map<String, dynamic>? data;
@@ -17,6 +18,7 @@ class CategoryWidget extends StatelessWidget {
 
     List list = data?["categories"];
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16)
@@ -24,13 +26,13 @@ class CategoryWidget extends StatelessWidget {
           child: Row(
             children: [
               Text(
-                "Our Categories ",
+                kOurCategories,
                 style: GoogleFonts.poppins(
                     fontWeight: FontWeight.w600, fontSize: 18),
               ),
               const Spacer(),
               Text(
-                "View All",
+                kViewAll,
                 style: GoogleFonts.poppins(
                     fontWeight: FontWeight.w500,
                     fontSize: 14,
