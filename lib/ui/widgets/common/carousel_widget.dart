@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:stacked_tdd_app/ui/widgets/common/network_image.dart';
 
 class CarouselWidget extends StatelessWidget {
   final Map<String, dynamic>? data;
@@ -18,14 +19,7 @@ class CarouselWidget extends StatelessWidget {
           margin: const EdgeInsets.symmetric(horizontal: 8),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(10),
-            child: Image.network(
-              item["image"],
-              fit: BoxFit.cover,
-              errorBuilder: (context, error, stackTrace) => const Icon(
-                Icons.broken_image,
-                size: 100,
-              ),
-            ),
+            child: NetworkImageWidget(url: item["image"] ?? ""),
           ),
         );
       }).toList(),

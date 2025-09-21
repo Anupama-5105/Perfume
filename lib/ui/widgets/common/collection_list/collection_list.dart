@@ -5,6 +5,7 @@ import 'package:stacked_tdd_app/ui/common/app_colors.dart';
 import 'package:stacked_tdd_app/ui/common/app_images.dart';
 import 'package:stacked_tdd_app/ui/common/app_strings.dart';
 import 'package:stacked_tdd_app/ui/common/ui_helpers.dart';
+import 'package:stacked_tdd_app/ui/widgets/common/network_image.dart';
 
 import 'collection_list_model.dart';
 
@@ -72,13 +73,8 @@ class CollectionList extends StackedView<CollectionListModel> {
                                 SizedBox(
                                   height: 115,
                                   child: Center(
-                                    child: Image.network(
-                                      list[index]["image"],
-                                      fit: BoxFit.cover,
-                                      errorBuilder:
-                                          (context, error, stackTrace) =>
-                                              Image.asset(spreyIcon),
-                                    ),
+                                    child: NetworkImageWidget(
+                                        url: list[index]["image"]),
                                   ),
                                 ),
                                 verticalSpaceSmall,

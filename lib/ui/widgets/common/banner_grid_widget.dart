@@ -23,7 +23,6 @@ class BannerGridWidget extends StatelessWidget {
       itemBuilder: (context, index) {
         return Container(
           decoration: BoxDecoration(
-            color: Colors.blue,
             borderRadius: BorderRadius.circular(10),
           ),
           child: ClipRRect(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:stacked_tdd_app/ui/common/app_strings.dart';
+import 'package:stacked_tdd_app/ui/widgets/common/network_image.dart';
 
 class RfqWidget extends StatelessWidget {
   final Map<String, dynamic>? data;
@@ -17,12 +18,7 @@ class RfqWidget extends StatelessWidget {
             width: double.infinity,
             child: ClipRRect(
               borderRadius: BorderRadius.circular(10),
-              child: Image.network(
-                data?['image'] ?? "",
-                fit: BoxFit.cover,
-                errorBuilder: (context, error, stackTrace) =>
-                    const Icon(Icons.broken_image),
-              ),
+              child: NetworkImageWidget(url: data?['image'] ?? ""),
             ),
           ),
           Positioned.fill(

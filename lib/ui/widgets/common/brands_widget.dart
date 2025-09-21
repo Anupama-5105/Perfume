@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:stacked_tdd_app/ui/common/app_colors.dart';
 import 'package:stacked_tdd_app/ui/common/app_strings.dart';
+import 'package:stacked_tdd_app/ui/widgets/common/network_image.dart';
 
 class BrandsWidget extends StatelessWidget {
   final Map<String, dynamic>? data;
@@ -55,14 +56,7 @@ class BrandsWidget extends StatelessWidget {
                   padding:
                       const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                   child: Center(
-                    child: Image.network(
-                      list[index]["image"],
-                      fit: BoxFit.cover,
-                      errorBuilder: (context, error, stackTrace) => const Icon(
-                        Icons.broken_image,
-                        size: 100,
-                      ),
-                    ),
+                    child: NetworkImageWidget(url: list[index]["image"]),
                   ),
                 );
               },
